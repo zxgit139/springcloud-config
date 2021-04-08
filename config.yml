@@ -1,2 +1,23 @@
+
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://127.0.0.1:8081/eureka
+    register-with-eureka: true # 集群必须是true
+    fetch-registry: true  # 集群必须是true
+  instance: # 设置主机名称
+    instance-id: product8082
+    prefer-ip-address: true # 访问路径显示ip地址
+    lease-expiration-duration-in-seconds: 30 # eureka客户端默认像服务端发送心跳间隔 单位30s 默认30s
+    lease-renewal-interval-in-seconds: 90  # 服务端在收到最后一次心跳等待时间 单位s 默认90s 超时剔除
+
+
 server:
-  prot:8080
+  port: 8082  #服务端口号
+spring:
+  application:
+    name: service-provider #服务名称--调用的时候根据名称来调application.yml用该服务的方法
+
+
+
+
