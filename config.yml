@@ -11,7 +11,6 @@ eureka:
     lease-expiration-duration-in-seconds: 30 # eureka客户端默认像服务端发送心跳间隔 单位30s 默认30s
     lease-renewal-interval-in-seconds: 90  # 服务端在收到最后一次心跳等待时间 单位s 默认90s 超时剔除
 
-
 server:
   port: 8082  #服务端口号
 spring:
